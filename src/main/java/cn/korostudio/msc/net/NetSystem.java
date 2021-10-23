@@ -73,6 +73,11 @@ public class NetSystem {
                 server.setNetwork_out(network_out);
                 server.setNetwork_rx(network_rx);
                 server.setNetwork_tx(network_tx);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
         }).start();
