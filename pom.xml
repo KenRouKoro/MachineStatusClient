@@ -5,14 +5,31 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.korostudio</groupId>
-    <artifactId>msc</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>machinestatusclient</artifactId>
+    <version>0.1-Aplha</version>
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>cn.korostudio.msc.main.Main</mainClass> <!-- 此处为主入口-->
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
 
         <dependency>
