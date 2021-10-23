@@ -117,9 +117,13 @@ public class NetSystem {
             Map<String, Object> paramMap = BeanUtil.beanToMap(server);
             try {
                 String result = HttpUtil.post(Setting.getSetting().getStr("host", "http://127.0.0.1:8090/update"), paramMap);
-                logger.info("Get : " + result);
             } catch (Exception e) {
-                logger.error("服务器连接失败");
+                logger.error("服务器连接失败,10秒后重试。");
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
             }
 
 
