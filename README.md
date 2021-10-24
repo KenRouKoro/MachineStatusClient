@@ -1,7 +1,36 @@
 # MachineStatusClient
 ### MachineStatus服务器监控的客户端，一个开箱即用的服务器监控系统客户端。
 ## 如何部署
-### 1.建立目录结构
+### 1.依赖检查
+目前运行 MachineStatus 的最低依赖要求为 JRE 16，请务必确保在进行下面操作之前已经正确安装了 JRE。
+
+目前介绍两种 Linux 发行版的安装方式，均为 OpenJRE。(推荐使用JDK17)
+
+#### CentOS
+```shell
+sudo yum install java-latest-openjdk -y
+```
+检查版本：
+```shell
+java -version
+```
+如果输出以下类似内容即代表成功
+```shell
+openjdk version "17" 2021-09-14
+```
+#### Ubuntu
+```shell
+sudo apt-get install openjdk-latest-jre -y
+```
+#### 检查版本：
+```shell
+java -version
+```
+如果输出以下类似内容即代表成功
+```shell
+openjdk version "17" 2021-09-14
+```
+### 2.建立目录结构
 创建存放 运行包 的目录，这里以 ~/app 为例
 ```shell
 mkdir ~/app && cd ~/app
@@ -39,12 +68,12 @@ host = http://127.0.0.1:3620/update
 ****
 **请注意！在客户端第一次开启后，serverID不可更改，其他可以更改。**
 ****
-### 2.测试运行 MachineStatusClient
+### 3.测试运行 MachineStatusClient
 ```shell
 cd ~/app && java -jar MSC.jar
 ```
 无报错即可
-## 3.作为服务运行
+## 4.作为服务运行
 1.下载 MachineStatus 官方的 msc.service 模板
 ```shell
 wget  https://file.korostudio.cn/msc_1635086196488.service -O /etc/systemd/system/msc.service
