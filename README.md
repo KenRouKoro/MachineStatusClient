@@ -65,6 +65,8 @@ region = CN
 serverID = koro
   #服务端地址，需要在后面加上子目录/update，支持cdn，反向代理
 host = http://127.0.0.1:3620/update
+  #连接密码，客户端需与服务端的密码一致，默认为korostudio
+password = korostudio
 ```
 ****
 **请注意！在客户端第一次开启后，serverID不可更改，其他可以更改。**
