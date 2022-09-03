@@ -1,8 +1,8 @@
 # MachineStatusClient
-### MachineStatus服务器监控的客户端，一个开箱即用的服务器监控系统客户端。
+### MachineStatus服务器监控的客户端，一个开箱即用的服务器监控系统客户端。支持Windows • Linux • macOS(x86 And ARM M1) • Unix (AIX, FreeBSD, OpenBSD, Solaris)
 ## 如何部署
 ### 1.依赖检查
-目前运行 MachineStatusClient 的最低依赖要求为 JRE 16，请务必确保在进行下面操作之前已经正确安装了 JRE。
+目前运行 MachineStatusClient 的最低依赖要求为 JRE 17，请务必确保在进行下面操作之前已经正确安装了 JRE。
 
 目前介绍两种 Linux 发行版的安装方式，均为 OpenJRE。(推荐使用JDK17)
 
