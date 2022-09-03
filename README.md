@@ -41,6 +41,7 @@ wget https://github.com/KenRouKoro/MachineStatusClient/releases/download/0.1-Alp
 ```
 创建 工作目录
 ```shell
+mkdir ~/.ms
 mkdir ~/.ms/client && cd ~/.ms/client
 ```
 下载示例配置文件到工作目录
