@@ -41,17 +41,7 @@ public class NetSystem {
 
         setting.autoLoad(true);
 
-
-        server.setCustom(setting.getStr("Custom", ""));
-        server.setLocation(setting.getStr("location", "中国"));
         server.setServerID(setting.getStr("serverID", StrUtil.uuid()));
-        server.setHost(setting.getStr("serverhost", "127.0.0.1"));
-        server.setName(setting.getStr("name", "NULL"));
-        server.setOnline(true);
-        server.setType(setting.getStr("type", "KVM"));
-        server.setRegion(setting.getStr("region", "CN"));
-        server.setMemory_total(OshiUtil.getMemory().getTotal() / 1024);
-        server.setSwap_total(OshiUtil.getMemory().getVirtualMemory().getSwapTotal() / 1024);
 
         log.info("当前服务器ID："+server.getServerID());
 
@@ -65,6 +55,18 @@ public class NetSystem {
             long network_last_out = 0;
             @Override
             public void execute() {
+
+                server.setCustom(setting.getStr("Custom", ""));
+                server.setLocation(setting.getStr("location", "中国"));
+                server.setServerID(setting.getStr("serverID", StrUtil.uuid()));
+                server.setHost(setting.getStr("serverhost", "127.0.0.1"));
+                server.setName(setting.getStr("name", "NULL"));
+                server.setOnline(true);
+                server.setType(setting.getStr("type", "KVM"));
+                server.setRegion(setting.getStr("region", "CN"));
+                server.setMemory_total(OshiUtil.getMemory().getTotal() / 1024);
+                server.setSwap_total(OshiUtil.getMemory().getVirtualMemory().getSwapTotal() / 1024);
+
                 SystemInfo si = new SystemInfo();
                 HardwareAbstractionLayer hal = si.getHardware();
 
